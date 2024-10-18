@@ -1,0 +1,42 @@
+; Run Parameters
+integrator = md
+dt = 0.001
+nsteps = 0 ; No dynamics, just energy evaluation
+
+; Output control
+nstenergy = 1
+nstlog = 1
+
+; Nonbonded settingd
+coulombtype = Cut-off
+rcoulomb = 2.0
+
+; this is for switching function
+
+vdwtype = Cut-off 
+vdw-modifier = Potential-switch
+rvdw = 2.0
+pbc = xyz
+continuation = yes
+rvdw-switch = 1.75
+; Turn off temperature coupling (thermostat)
+tcoupl = no
+
+; Turn off pressure coupling (barostat)
+pcoupl = no
+
+free-energy       = yes
+couple-moltype      = LJ2
+couple-lambda0      = vdw
+couple-lambda1      = none
+init-lambda-state    = 0	; go from 0 to 10
+fep-lambdas       =
+mass-lambdas       =
+coul-lambdas       =
+vdw-lambdas       = 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0	
+calc-lambda-neighbors  = -1
+;sc-function       = beutler ;check the	anthracene
+sc-alpha         = 0.5
+sc-power         = 1
+dhdl-print-energy   	 = total
+separate-dhdl-file    = yes
