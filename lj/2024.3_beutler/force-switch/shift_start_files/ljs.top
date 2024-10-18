@@ -1,0 +1,35 @@
+; Lennard-Jones spheres topology
+
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+1 1 no 1.0 1.0
+
+[ atomtypes ]
+; name mass charge ptype sigma epsilon
+LJ1 1.0 0.0 A 1.0 1.0
+LJ2 1.0 0.0 A 1.0 1.0
+
+[ moleculetype ]
+; name nrexcl
+LJ1 1
+
+[ atoms ]
+; nr type resnr residue atom cgnr charge mass
+1 LJ1 1 LJ1 LJ1 1 0.0 1.0
+
+[ moleculetype ]
+; name nrexcl
+LJ2 1
+
+[ atoms ]
+; nr type resnr residue atom cgnr charge mass
+1 LJ2 1 LJ2 LJ2 1 0.0 1.0
+
+[ system ]
+; Name
+Lennard-Jones Spheres
+
+[ molecules ]
+; Compound nmols
+LJ1 1
+LJ2 1
