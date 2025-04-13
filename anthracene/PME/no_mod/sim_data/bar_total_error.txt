@@ -1,0 +1,1 @@
+Total propagated BAR error: 0.01446

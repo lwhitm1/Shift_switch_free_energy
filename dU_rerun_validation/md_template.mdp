@@ -1,0 +1,46 @@
+; Run Parameters
+integrator = md
+dt = 0.001
+nsteps = 200 
+
+; Output control
+nstenergy = 50
+nstlog = 50
+nstxout = 50
+
+; Nonbonded setting
+coulombtype = PME
+; short cutoff to amplify any issues 
+rcoulomb = 0.8
+
+; Force-switch for the shift
+vdwtype = Cut-off
+; use one of these three
+;vdw-modifier = Force-switch
+;vdw-modifier = Potential-shift
+;vdw-modifier = Potential-switch
+vdw-modifier = REPLACE_VDW_MODIFIER
+
+rvdw = 0.8
+pbc = xyz
+continuation = yes
+; sometimes gets left out to be sure what is happening
+rvdw-switch = 0.75
+dispcorr = REPLACE_DISPCORR
+
+; Temperature coupling (thermostat)
+tcoupl = no ; turn off for simplicity
+
+; Turn off pressure coupling (barostat) for simplicity
+pcoupl = no
+
+free-energy         = yes
+nstdhdl             = 50 
+init-lambda-state   = REPLACE_INIT_LAMBDA_STATE
+coul-lambdas      = 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 
+vdw-lambdas       = 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0	
+calc-lambda-neighbors  = -1
+sc-alpha         = 0.5
+sc-power         = 1
+dhdl-print-energy   	 = potential
+separate-dhdl-file    = yes
