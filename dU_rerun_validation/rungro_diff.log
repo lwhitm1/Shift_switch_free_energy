@@ -1,0 +1,1321 @@
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_run0.mdp -p reference.top -c reference.gro -o fe_run0.tpr
+
+
+NOTE 1 [file fe_run0.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_run0.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_run0.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "I'm An Oakman" (Pulp Fiction)
+
+Setting the LD random seed to -149145605
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -s fe_run0.tpr -g fe_run0.log -e fe_run0.edr -o fe_run0out.trr -c fe_run0out.gro -dhdl fe_run0.dhdl.xvg
+
+Reading file fe_run0.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting mdrun 'Tryptophan Side Chain Analog'
+200 steps,      0.2 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.594        0.594      100.0
+                 (ns/day)    (hour/ns)
+Performance:       29.231        0.821
+
+GROMACS reminds you: "I'm An Oakman" (Pulp Fiction)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_run0.edr -o fe_run0.energy.xvg
+
+Opened fe_run0.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  Kinetic-En.     12  Total-Energy  
+ 13  Temperature     14  Pressure        15  dVcoul/dl       16  dVvdw/dl      
+ 17  Vir-XX          18  Vir-XY          19  Vir-XZ          20  Vir-YX        
+ 21  Vir-YY          22  Vir-YZ          23  Vir-ZX          24  Vir-ZY        
+ 25  Vir-ZZ          26  Pres-XX         27  Pres-XY         28  Pres-XZ       
+ 29  Pres-YX         30  Pres-YY         31  Pres-YZ         32  Pres-ZX       
+ 33  Pres-ZY         34  Pres-ZZ         35  #Surf*SurfTen   36  T-rest        
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "I'm An Oakman" (Pulp Fiction)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35458.2         --    146.101   -164.094  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval0.mdp -p reference.top -c reference.gro -o fe_eval0.tpr
+
+
+NOTE 1 [file fe_eval0.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval0.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval0.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "I'm An Oakman" (Pulp Fiction)
+
+Setting the LD random seed to -8521242
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval0.tpr -g fe_eval0.log -e fe_eval0.edr -o fe_eval0out.trr -c fe_eval0out.gro -dhdl fe_eval0.dhdl.xvg
+
+Reading file fe_eval0.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      28 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.043        0.043       99.8
+                 (ns/day)    (hour/ns)
+Performance:      402.382        0.060
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval0.edr -o fe_eval0.energy.xvg
+
+Opened fe_eval0.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35458.2         --      146.1   -149.219  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval1.mdp -p reference.top -c reference.gro -o fe_eval1.tpr
+
+
+NOTE 1 [file fe_eval1.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval1.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval1.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -67637698
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval1.tpr -g fe_eval1.log -e fe_eval1.edr -o fe_eval1out.trr -c fe_eval1out.gro -dhdl fe_eval1.dhdl.xvg
+
+Reading file fe_eval1.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      28 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.043        0.043       99.8
+                 (ns/day)    (hour/ns)
+Performance:      406.516        0.059
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval1.edr -o fe_eval1.energy.xvg
+
+Opened fe_eval1.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35464.4         --    145.398   -144.304  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval2.mdp -p reference.top -c reference.gro -o fe_eval2.tpr
+
+
+NOTE 1 [file fe_eval2.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval2.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval2.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -1139029
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval2.tpr -g fe_eval2.log -e fe_eval2.edr -o fe_eval2out.trr -c fe_eval2out.gro -dhdl fe_eval2.dhdl.xvg
+
+Reading file fe_eval2.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      27 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.042        0.042       99.8
+                 (ns/day)    (hour/ns)
+Performance:      414.860        0.058
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval2.edr -o fe_eval2.energy.xvg
+
+Opened fe_eval2.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35465.2         --    144.854   -141.355  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval3.mdp -p reference.top -c reference.gro -o fe_eval3.tpr
+
+
+NOTE 1 [file fe_eval3.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval3.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval3.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -16779394
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval3.tpr -g fe_eval3.log -e fe_eval3.edr -o fe_eval3out.trr -c fe_eval3out.gro -dhdl fe_eval3.dhdl.xvg
+
+Reading file fe_eval3.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      28 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.043        0.043       99.8
+                 (ns/day)    (hour/ns)
+Performance:      406.421        0.059
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval3.edr -o fe_eval3.energy.xvg
+
+Opened fe_eval3.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35463.2         --    144.452    -139.49  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval4.mdp -p reference.top -c reference.gro -o fe_eval4.tpr
+
+
+NOTE 1 [file fe_eval4.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval4.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval4.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -672356894
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval4.tpr -g fe_eval4.log -e fe_eval4.edr -o fe_eval4out.trr -c fe_eval4out.gro -dhdl fe_eval4.dhdl.xvg
+
+Reading file fe_eval4.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      28 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.042        0.042       99.8
+                 (ns/day)    (hour/ns)
+Performance:      415.492        0.058
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval4.edr -o fe_eval4.energy.xvg
+
+Opened fe_eval4.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35459.4         --    144.162   -138.271  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval5.mdp -p reference.top -c reference.gro -o fe_eval5.tpr
+
+
+NOTE 1 [file fe_eval5.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval5.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval5.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -109420560
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval5.tpr -g fe_eval5.log -e fe_eval5.edr -o fe_eval5out.trr -c fe_eval5out.gro -dhdl fe_eval5.dhdl.xvg
+
+Reading file fe_eval5.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      25 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.047        0.047       99.8
+                 (ns/day)    (hour/ns)
+Performance:      372.214        0.064
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval5.edr -o fe_eval5.energy.xvg
+
+Opened fe_eval5.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35454.5         --    143.957   -137.458  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval6.mdp -p reference.top -c reference.gro -o fe_eval6.tpr
+
+
+NOTE 1 [file fe_eval6.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval6.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval6.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -538460161
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval6.tpr -g fe_eval6.log -e fe_eval6.edr -o fe_eval6out.trr -c fe_eval6out.gro -dhdl fe_eval6.dhdl.xvg
+
+Reading file fe_eval6.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      28 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.043        0.043       99.8
+                 (ns/day)    (hour/ns)
+Performance:      407.501        0.059
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval6.edr -o fe_eval6.energy.xvg
+
+Opened fe_eval6.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35448.9         --    143.812   -136.909  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval7.mdp -p reference.top -c reference.gro -o fe_eval7.tpr
+
+
+NOTE 1 [file fe_eval7.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval7.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval7.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -11275265
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval7.tpr -g fe_eval7.log -e fe_eval7.edr -o fe_eval7out.trr -c fe_eval7out.gro -dhdl fe_eval7.dhdl.xvg
+
+Reading file fe_eval7.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      28 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.043        0.043       99.8
+                 (ns/day)    (hour/ns)
+Performance:      403.738        0.059
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval7.edr -o fe_eval7.energy.xvg
+
+Opened fe_eval7.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35442.9         --    143.714   -136.535  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval8.mdp -p reference.top -c reference.gro -o fe_eval8.tpr
+
+
+NOTE 1 [file fe_eval8.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval8.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval8.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to -453855298
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval8.tpr -g fe_eval8.log -e fe_eval8.edr -o fe_eval8out.trr -c fe_eval8out.gro -dhdl fe_eval8.dhdl.xvg
+
+Reading file fe_eval8.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      27 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.042        0.042       99.8
+                 (ns/day)    (hour/ns)
+Performance:      412.710        0.058
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval8.edr -o fe_eval8.energy.xvg
+
+Opened fe_eval8.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -35436.5         --    143.648    -136.28  (kJ/mol)
+            :-) GROMACS - gmx grompp, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d grompp -f fe_eval9.mdp -p reference.top -c reference.gro -o fe_eval9.tpr
+
+
+NOTE 1 [file fe_eval9.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 2 [file fe_eval9.mdp]:
+  Setting nstcalcenergy (100) equal to nstenergy (50)
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 5400.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file fe_eval9.mdp]:
+  NVE simulation: will use the initial temperature of 300.581 K for
+  determining the Verlet buffer size
+
+
+There were 3 NOTEs
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+Setting the LD random seed to 2143967709
+
+Generated 210 of the 210 non-bonded parameter combinations
+
+Generated 210 of the 210 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Trp_Side_Chain'
+
+Excluding 1 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'reference.gro'
+Analysing residue names:
+There are:     1      Other residues
+There are:   891      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between non-perturbed excluded atoms is 0.152 nm between atom 582 and 583
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300.581 K
+
+Calculated rlist for 1x1 atom pair-list as 0.812 nm, buffer size 0.012 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.800 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 28x28x28, spacing 0.107 0.107 0.107
+
+Estimate for the relative computational load of the PME mesh part: 0.38
+
+This run will generate roughly 1 Mb of data
+             :-) GROMACS - gmx mdrun, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d mdrun -nt 1 -rerun fe_run0out.trr -s fe_eval9.tpr -g fe_eval9.log -e fe_eval9.edr -o fe_eval9out.trr -c fe_eval9out.gro -dhdl fe_eval9.dhdl.xvg
+
+Reading file fe_eval9.tpr, VERSION 2025.1 (double precision)
+Can not increase nstlist because an NVE ensemble is used
+Using 1 MPI thread
+starting md rerun 'Tryptophan Side Chain Analog', reading coordinates from input trajectory 'fe_run0out.trr'
+
+trr version: GMX_trn_file (double precision)
+Reading frame       0 time    0.000   Reading frame       1 time    0.050   Reading frame       2 time    0.100   Reading frame       3 time    0.150   Reading frame       4 time    0.200   Last frame          4 time    0.200   
+
+NOTE: 3 % of the run time was spent in domain decomposition,
+      27 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.042        0.042       99.8
+                 (ns/day)    (hour/ns)
+Performance:      415.563        0.058
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+            :-) GROMACS - gmx energy, 2025.1 (double precision) (-:
+
+Executable:   /Users/lwhitm1/projects/paper/pkgs/gromacs_double/bin/gmx_d
+Data prefix:  /Users/lwhitm1/projects/paper/pkgs/gromacs_double
+Working dir:  /Users/lwhitm1/projects/paper/differences
+Command line:
+  gmx_d energy -dp -f fe_eval9.edr -o fe_eval9.energy.xvg
+
+Opened fe_eval9.edr as double precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  dVcoul/dl       12  dVvdw/dl      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.050         Reading energy frame      2 time    0.100         Reading energy frame      3 time    0.150         Reading energy frame      4 time    0.200         Last energy frame read 4 time    0.200         
+
+GROMACS reminds you: "Dreams seldom materialize on their own." (Dian Fossey)
+
+
+Statistics over 201 steps [ 0.0000 through 0.2000 ps ], 1 data sets
+All statistics are over 5 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                    -35430         --    143.608   -136.107  (kJ/mol)
+run
+             0             1             2             3             4             5             6             7             8             9
+    0.00000000  -11.39054200  -15.30336400  -15.15279200  -12.59997300   -8.54538590   -3.51655320    2.15901110    8.26866900   14.66942800
+    0.00000000   -5.46546590   -6.08462010   -3.96578410   -0.18361368    4.65873030   10.19784800   16.20270600   22.52018300   29.04542300
+    0.00000000   -4.20239130   -3.54078700   -0.37435736    4.20282580    9.62424590   15.57081300   21.85056100   28.34179800   34.96407900
+    0.00000000   -4.19062760   -3.89730390   -1.13164400    3.10557910    8.26493330   14.02145400   20.17153600   26.58170500   33.16126500
+    0.00000000   -5.88307910   -6.56614590   -4.40777420   -0.55932139    4.35305600    9.96022740   16.03077900   22.41256600   29.00177900
+evaluated
+             0             1             2             3             4             5             6             7             8             9
+    0.00000000  -11.39054216  -15.30336357  -15.15279220  -12.59997350   -8.54538590   -3.51655321    2.15901108    8.26866898   14.66942753
+    0.00000000   -5.46546594   -6.08462011   -3.96578407   -0.18361368    4.65873030   10.19784824   16.20270633   22.52018307   29.04542334
+    0.00000000   -4.20239133   -3.54078695   -0.37435736    4.20282580    9.62424586   15.57081311   21.85056150   28.34179752   34.96407884
+    0.00000000   -4.19062762   -3.89730393   -1.13164396    3.10557915    8.26493334   14.02145398   20.17153603   26.58170460   33.16126485
+    0.00000000   -5.88307914   -6.56614595   -4.40777417   -0.55932139    4.35305596    9.96022739   16.03077904   22.41256641   29.00177851
+difference
+             0             1             2             3             4             5             6             7             8             9
+    0.00000000    0.00000016   -0.00000043    0.00000020    0.00000050    0.00000000    0.00000001    0.00000002    0.00000002    0.00000047
+    0.00000000    0.00000004    0.00000001   -0.00000003    0.00000000    0.00000000   -0.00000024   -0.00000033   -0.00000007   -0.00000034
+    0.00000000    0.00000003   -0.00000005   -0.00000000    0.00000000    0.00000004   -0.00000011   -0.00000050    0.00000048    0.00000016
+    0.00000000    0.00000002    0.00000003   -0.00000004   -0.00000005   -0.00000004    0.00000002   -0.00000003    0.00000040    0.00000015
+    0.00000000    0.00000004    0.00000005   -0.00000003    0.00000000    0.00000004    0.00000001   -0.00000004   -0.00000041    0.00000049
